@@ -62,5 +62,8 @@ new Vue({
         }
       }
     },
+    exit() {
+      location.reload();
+    },
   },
 });

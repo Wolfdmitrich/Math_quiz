@@ -34,6 +34,9 @@
                 </div>
             </div>
             <div class="slide" v-show="showNextSlide && slideIndex === 1">
+                <div class="exit">
+                    <p id="exit_label" @click="exit">Выйти</p>
+                </div>
                 <h1>Введите ответ на выражение: </h1>
                 <div class="expression">
                     <h2>{{ expression }}</h2>

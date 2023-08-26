@@ -40,3 +40,15 @@ div.expression {
 button.answerBtn {
   margin-top: 4vw !important;
 }
+
+p#exit_label {
+  user-select: none;
+  position: relative;
+  left: 38%;
+  color: rgb(255, 72, 0);
+  font-size: 1.2rem;
+}
+
+p#exit_label:hover {
+  cursor: pointer;
+}
