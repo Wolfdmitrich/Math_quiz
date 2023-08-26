@@ -1,0 +1,42 @@
+@import url(https://fonts.googleapis.com/css?family=Jost:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-align: center !important;
+  font-family: "Jost", sans-serif !important;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  margin: 20px;
+}
+
+div.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+button.select-complexity {
+  margin: 1.2vh;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 10px 20px;
+}
+
+h1#welcome_header {
+  padding-bottom: 2.5vh;
+}
+
+div.expression {
+  padding: 2.5vw;
+}
+
+button.answerBtn {
+  margin-top: 4vw !important;
+}

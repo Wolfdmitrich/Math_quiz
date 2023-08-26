@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Математическая викторина</title>
+    <!-- CSS Connections -->
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap_icons.css">
+
+    <!-- JS Connections -->
+    <script src="/eel.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="slide" v-show="!showNextSlide">
+                <h1>Добро пожаловать в математическую викторину!</h1>
+                <br>
+                <h1>Выберите сложность:</h1>
+                <div class="buttons">
+                    <button class="btn btn-primary select-complexity" @click="hideSlide"
+                        complexity="easy">Лёгкая</button>
+                    <button class="btn btn-warning select-complexity" @click="hideSlide"
+                        complexity="medium">Средняя</button>
+                    <button class="btn btn-danger select-complexity" @click="hideSlide"
+                        complexity="hard">Сложная</button>
+                </div>
+            </div>
+            <div class="slide" v-show="showNextSlide && slideIndex === 1">
+                <h1>Введите ответ на выражение: </h1>
+                <div class="expression">
+                    <h2>{{ expression }}</h2>
+                </div>
+                <input type="number" name="answer" class="form-control" v-model="userAnswer" required>
+                <button class="btn btn-primary answerBtn" @click="generateAndShowExpression" data-bs-toggle="modal"
+                    data-bs-target="#resultModal">Продолжить!</button>
+                <!-- Модальное окно -->
+                <div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">{{ modalHeader }}</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Закрыть"></button>
+                            </div>
+                            <div class="modal-body">
+                                {{ modalBody }}
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" v-show="showNextSlide && slideIndex === 2">
+
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>
