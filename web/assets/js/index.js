@@ -40,7 +40,7 @@ new Vue({
             1,
             20
           )}+${this.generateRandomNumber(20, 50)}`;
-          this.correctAnswer = eval(this.expression).toFixed(1);
+          this.correctAnswer = eval(this.expression).toFixed(0);
         } else if (this.complexity == "medium") {
           this.expression = `${this.generateRandomNumber(
             5,
@@ -48,7 +48,7 @@ new Vue({
           )}${this.getRandomElement(
             this.mediumSigns
           )}${this.generateRandomNumber(50, 100)}`;
-          this.correctAnswer = eval(this.expression).to_.toFixed(1);
+          this.correctAnswer = eval(this.expression).toFixed(0);
         } else if (this.complexity == "hard") {
           this.expression = `${this.generateRandomNumber(
             50,
@@ -57,7 +57,7 @@ new Vue({
             10,
             1000
           )}`;
-          this.correctAnswer = eval(this.expression).toFixed(1);
+          this.correctAnswer = eval(this.expression).toFixed(0);
           console.log(this.correctAnswer);
         }
       }

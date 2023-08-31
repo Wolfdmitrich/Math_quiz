@@ -44,7 +44,7 @@ button.answerBtn {
 p#exit_label {
   user-select: none;
   position: relative;
-  left: 38%;
+  right: -38%;
   color: rgb(255, 72, 0);
   font-size: 1.2rem;
 }
